@@ -12,18 +12,48 @@ body {
   text-align: center;
   padding: 100px 20px;
 }
+
+.icon {
+  width: 100px;
+  margin: 0 auto 20px;
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 h1 {
   color: #4CAF50;
+  font-size: 2.5em;
 }
+
+p {
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+
 a {
   color: #4CAF50;
   text-decoration: none;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 30px;
   background: #333;
   padding: 10px 20px;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
+
 a:hover {
   background: #444;
 }
@@ -31,8 +61,11 @@ a:hover {
 </head>
 <body>
 
+<img src="images/thankyou-icon.png" alt="Thank You Icon" class="icon">
+
 <h1>Thank You!</h1>
 <p>Your message has been received. I'll get back to you as soon as possible.</p>
+
 <a href="index.html">Return to Home</a>
 
 </body>
