@@ -6,26 +6,25 @@
 <title>Client Agreement Form</title>
 <link rel="stylesheet" href="style.css">
 <style>
-body {
-  background: #121212;
-  color: #eaeaea;
-  font-family: Arial, sans-serif;
-  padding-bottom: 80px;
-}
-
-form {
-  max-width: 600px;
+.agreement-form {
   background: #1f1f1f;
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
+  max-width: 600px;
 }
-label {
+
+.agreement-form label {
   display: block;
   margin-top: 15px;
   font-weight: bold;
 }
-input, select, textarea {
+
+.agreement-form input[type="text"],
+.agreement-form input[type="email"],
+.agreement-form input[type="date"],
+.agreement-form select,
+.agreement-form textarea {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -33,18 +32,27 @@ input, select, textarea {
   color: #fff;
   border: 1px solid #555;
   border-radius: 4px;
+  display: block;
 }
-.checkbox-group {
+
+.agreement-form input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+.agreement-form .checkbox-group {
   margin-top: 10px;
 }
-.checkbox-group label {
+
+.agreement-form .checkbox-group label {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 10px;
   font-weight: normal;
 }
-button {
+
+.agreement-form button {
   margin-top: 20px;
   padding: 10px;
   width: 100%;
@@ -54,34 +62,9 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-button:hover {
+
+.agreement-form button:hover {
   background: #45a049;
-}
-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding-bottom: 70px;
-}
-.whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 50px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  z-index: 1000;
-}
-.whatsapp-button img {
-  width: 20px;
-  margin-right: 8px;
-}
-.whatsapp-button:hover {
-  background: #20b358;
 }
 </style>
 </head>
@@ -92,7 +75,7 @@ footer {
 </header>
 
 <main>
-<form action="https://usebasin.com/f/d2ec02218920" method="POST">
+<form class="agreement-form" action="https://usebasin.com/f/d2ec02218920" method="POST">
   
   <input type="hidden" name="_redirect" value="thank-you.html">
 
