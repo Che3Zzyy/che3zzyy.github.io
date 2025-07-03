@@ -11,30 +11,28 @@
     text-align: center;
     font-family: Arial, sans-serif;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
   }
 
-  .checkmark {
-    width: 100px;
-    height: 100px;
+  .circle {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    display: inline-block;
     border: 4px solid #4BB543;
-    position: relative;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
     animation: pop 0.5s ease;
   }
 
-  .checkmark::after {
-    content: '';
-    position: absolute;
-    left: 28px;
-    top: 50px;
-    width: 25px;
-    height: 50px;
-    border-right: 4px solid #4BB543;
-    border-bottom: 4px solid #4BB543;
-    transform: rotate(45deg);
-    animation: draw 0.5s ease forwards;
+  .check {
+    color: #4BB543;
+    font-size: 60px;
+    line-height: 1;
   }
 
   @keyframes pop {
@@ -42,13 +40,9 @@
     100% { transform: scale(1); }
   }
 
-  @keyframes draw {
-    0% { height: 0; width: 0; }
-    100% { height: 25px; width: 12.5px; }
-  }
-
   h1 {
     color: #4BB543;
+    margin-bottom: 10px;
   }
 
   .btn {
@@ -65,7 +59,10 @@
 </head>
 <body>
 
-<div class="checkmark"></div>
+<div class="circle">
+  <div class="check">&#10004;</div>
+</div>
+
 <h1>Thank You!</h1>
 <p>Your message has been received. I'll get back to you as soon as possible.</p>
 <a href="index.html" class="btn">Return to Home</a>
