@@ -6,6 +6,13 @@
 <title>Client Agreement Form</title>
 <link rel="stylesheet" href="style.css">
 <style>
+body {
+  background: #121212;
+  color: #eaeaea;
+  font-family: Arial, sans-serif;
+  padding-bottom: 80px; /* Prevent WhatsApp overlap */
+}
+
 form {
   max-width: 600px;
   background: #1f1f1f;
@@ -46,6 +53,7 @@ button:hover {
 footer {
   text-align: center;
   margin-top: 30px;
+  padding-bottom: 70px; /* Extra space for WhatsApp button */
 }
 .whatsapp-button {
   position: fixed;
@@ -59,6 +67,7 @@ footer {
   display: flex;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
 }
 .whatsapp-button img {
   width: 20px;
@@ -77,6 +86,7 @@ footer {
 
 <main>
 <form action="https://formsubmit.co/stfndelange6@gmail.com" method="POST">
+  <input type="hidden" name="_next" value="thank-you.html">
 
   <label>Full Name</label>
   <input type="text" name="Full Name" required>
