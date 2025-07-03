@@ -37,6 +37,13 @@ input, select, textarea {
 .checkbox-group {
   margin-top: 10px;
 }
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-weight: normal;
+}
 button {
   margin-top: 20px;
   padding: 10px;
@@ -106,11 +113,10 @@ footer {
 
   <label>Additional Services</label>
   <div class="checkbox-group">
-    <input type="checkbox" name="Additional Services" value="Domain setup - R500"> Domain setup - R500<br>
-    <input type="checkbox" name="Additional Services" value="Email setup - R400"> Email setup - R400<br>
-    <input type="checkbox" name="Additional Services" value="SEO optimization - R1000"> SEO optimization - R1000<br>
-    <input type="checkbox" name="Additional Services" value="Design/logo assistance - R300"> Design/logo assistance - R300<br>
-    
+    <label><input type="checkbox" name="Additional Services" value="Domain setup - R500"> Domain setup - R500</label>
+    <label><input type="checkbox" name="Additional Services" value="Email setup - R400"> Email setup - R400</label>
+    <label><input type="checkbox" name="Additional Services" value="SEO optimization - R1000"> SEO optimization - R1000</label>
+    <label><input type="checkbox" name="Additional Services" value="Design/logo assistance - R300"> Design/logo assistance - R300</label>
   </div>
 
   <label>Estimated Completion Date</label>
@@ -119,9 +125,9 @@ footer {
   <label>Comments or Special Instructions</label>
   <textarea name="Comments" rows="4"></textarea>
 
-  <label>
-    <input type="checkbox" name="Agreement" required> I agree to the Website Development Terms & Conditions.
-  </label>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="Agreement" required> I agree to the Website Development Terms & Conditions.</label>
+  </div>
 
   <button type="submit">Submit Agreement</button>
 </form>
